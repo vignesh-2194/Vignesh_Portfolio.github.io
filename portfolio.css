@@ -1,0 +1,1025 @@
+/* MY CSS STYLING TO MY HTML DOC */
+
+/* FONT SELECTION IN CSS STYLING */
+
+@import url('https://.googleapis.com/css2?family=poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* FONT SELECTION IN CSS STYLING */
+
+
+/* UNIVERSAL INDICATOR SELECTION IN CSS STYLING STARTING PORTION */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+/* UNIVERSAL INDICATOR SELECTION IN CSS STYLING ENDING PORTION */
+
+
+/* BODY SECTION CSS STYLING STARTING */
+
+body{
+    
+    background: #081b29;
+    color: #ededed;
+}
+
+/* BODY SECTION CSS STYLING ENDING */
+
+
+
+/* HEADER SECTION CSS STYLING STARTING */
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+/* LOGO SECTION STARTING */
+
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: #ebebeb;
+    text-decoration: none;
+    font-weight: 600;
+    
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+/* LOGO SECTION ENDING */
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 29px;
+  left: 15%;
+  
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: wheat;
+  transition: .4s;
+  
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+  
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+/* BODY SECTION WITH HEADER SECTION AND NAV BAR ALSO INSIDE IT CSS STYLING STARTING */
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 400;
+    margin-left: 30px;
+    transition: .3s;
+
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #00abf0;
+}
+
+/* NAV BAR SECTION END */
+
+/* HOME SECTION STARTS */
+
+.home {
+    height: 110vh;
+    background: url("home2.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    justify-content: left;
+}
+
+.home-content {    
+    max-width: 600px;
+}
+
+.home-content h1 {
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-content h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content h3 {
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color: #00abf0;
+}
+
+.home-content h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.3s;
+}
+
+.home-content p {
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.home-content p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.6s;
+}
+
+.home-content .btn-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;  
+}
+
+.home-content .btn-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.9s;
+    z-index: 2;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover {
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(2):hover {
+    color: #081b29;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #00abf0;
+
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.btn-sci{
+    position: absolute;
+    bottom: 16%;
+    display: inline-block;
+    padding: 10px 30px;
+    background: #6bd830;
+    border: 2px solid #56813e;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #547c3f;
+    font-size: 16px;
+    font-weight: 600;
+    transition: .5s;
+    
+}
+
+
+.btn {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.home-sci::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.5s;
+    z-index: 2;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-sci a:hover {
+    color: #081b29;
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+.home-imgHover {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 500px;
+    height: 110%;
+    background: transparent;
+    transition: 3s;
+    animation: manipActiveHover .1s forwards;
+    animation-delay: 4s;
+    pointer-events: none;
+}
+
+.home-imgHover:hover {
+    background: #081b29;
+    opacity: .8;
+}
+
+.home-imgHover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 3s;
+    z-index: 100;
+}
+
+
+/* KEYFRAME ANIMATION */
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes manipActiveHover{
+    100% {
+        pointer-events: auto;
+    }
+}
+
+/* HOME SECTION ENDING WITH CSS STYLING HERE */
+
+/* ABOUT-SECTION CSS STYLING  STARTING PORTION */
+
+.about{
+    height: 150vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: #081b29;
+    padding-bottom: 6rem;
+}
+
+.heading{
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+span {
+    color: rgb(8, 128, 176);
+}
+
+.about-img {
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.about-img img {
+    width: 90%;
+    border-radius: 200%;
+    border: .2rem solid rgb(8, 128, 176);
+}
+
+.about-img .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid #081b29;
+    border-bottom: .2rem solid #081b29;
+    border-left: .2rem solid rgb(8, 128, 176);
+    border-right: .2rem solid rgb(8, 128, 176);
+}
+
+.about-content {
+    text-align: center;
+}
+.about-content h3 {
+    font-size: 2.6rem;
+}
+.about-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+.btn-box.btns {
+    display: inline-block;
+    width: 25rem;
+    height: 3rem;
+}
+
+.btn-box.btns a::before {
+    background: #081b29;
+}
+
+/* About Section is Ended */
+
+/* SKILLS CSS STYLING SECTION STARTING PORTION */
+
+.skill{
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+  
+}
+.container1 {
+    width: 1000px;
+    height: 500px;
+    padding: 75px 90px;
+    margin-left: 120px;
+    
+    
+    
+}
+
+.heading {
+    text-align: center;
+    text-decoration: none;
+    text-underline-offset: none;
+    text-decoration-thickness: none;
+    margin-bottom: 50px;
+    color: #00abf0;
+    
+}
+
+.bar {
+    font-size: 23px;
+
+}
+.Technical-bars .bar {
+    margin: 40px 0;
+    
+}
+.Technical-bars .bar:first-child {
+    margin-top: 0;
+}
+.Technical-bars .bar:last-child {
+    margin-bottom: 0;
+}
+.Technical-bars .bar .indfo {
+    margin-bottom: 5px;
+}
+.Technical-bars .bar .indfo span {
+    color: #ededed;
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 10;
+}
+
+.Technical-bars .bar .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #000;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.Technical-bars .bar .progress-line span{
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+.progress-line.html5 span {
+    width: 90%;
+}
+.progress-line.css3 span {
+    width: 80%;
+}
+.progress-line.javascript span {
+    width: 70%;
+}
+.progress-line.python span {
+    width: 75%;
+}
+.progress-line.react span {
+    width: 60%;
+}
+.progress-line span::after {
+    position: absolute;
+    padding: 1px 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+.progress-line.html5 span::after {
+    content: "90%";
+}
+.progress-line.css3 span::after {
+    content: "80%";
+}
+.progress-line.javascript span::after {
+    content: "70%";
+}
+.progress-line.python span::after {
+    content: "75%";
+}
+.progress-line.react span::after {
+    content: "60%";
+}
+
+.progress-line span::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-top-color: #000;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+
+}
+@keyframes showText {
+    100%{
+        opacity: 1;
+    }
+}
+
+/* Skills Section Ended */
+
+
+/* CERTIFICATION CSS STYLING SECTION STARTING PORTION */
+
+.certification{
+    position: relative;
+    top: 350px;
+}
+
+
+.heading-c {  
+    text-align: center;
+    text-decoration: none;
+    text-underline-offset: none;
+    text-decoration-thickness: none;
+    margin-bottom: 50px;
+    color: #00abf0;
+    font-size: 85px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #ebebeb;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgb(5, 218, 237);
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 50;
+}
+
+.card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+.card:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 8px 25px #00abf0;
+}
+
+.card h2 {
+    color: #00abf0;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    
+}
+
+.card .issuer {
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+
+}
+
+.card .date {
+    color: #888;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+}
+
+.card .button-container a {
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+.download-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+
+}
+
+.download-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.download-btn:active {
+    transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*CERTIFICATION CSS STYLING ENDING */
+
+
+/* PROJECTS CSS STYLING SECTION STARTING PORTION */
+
+
+.projects {
+    position: relative;
+    top: 600px;
+}
+
+
+.heading-p {  
+    text-align: center;
+    text-decoration: none;
+    text-underline-offset: none;
+    text-decoration-thickness: none;
+    margin-bottom: 50px;
+    color: #00abf0;
+    font-size: 85px;
+}
+
+.pro-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 30px;
+    padding-bottom: 50px;
+}
+
+.pro-card {
+    background-color: #000;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgb(5, 218, 237);
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 50;
+}
+
+.pro-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.pro-card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+.pro-card:nth-child(3) {
+    animation-delay: 0.5s;
+}
+.pro-card:nth-child(4) {
+    animation-delay: 0.6s;
+}
+.pro-card:nth-child(5) {
+    animation-delay: 0.8s;
+}
+.pro-card:nth-child(6) {
+    animation-delay: 0.9s;
+}
+.pro-card:nth-child(7) {
+    animation-delay: 0.10s;
+}
+
+.pro-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 8px 25px yellowgreen;
+}
+
+.pro-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    padding-bottom: 10px;
+}
+
+.pro-card h2 {
+    color: #00abf0;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    
+}
+
+.pro-card .pro-issuer {
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+
+}
+
+.pro-card .pro-date {
+    color: #888;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+}
+
+.pro-card .pro-button a {
+    text-decoration: none;
+    display:inline-block
+    
+
+}
+
+.pro-download-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+
+}
+
+.pro-download-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.pro-download-btn:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+    .pro-card{
+        width: 100%;
+    }
+
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* PROJECTS CSS STYLING SECTION ENDING */
+
+
+/* CONTACT CSS STYLING SECTION STARTING PORTION */
+
+.contact {
+    position: relative;
+    top: 500px;
+    padding: 25%;
+}
+
+.contact-section h1 {
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    color: #00abf0;
+    font-size: 85px;
+}
+.form-group {
+
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #777;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box; 
+}
+.b-btn {
+    width: 30%;
+    padding: 10px;
+    background-color: #00b7ff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font: bold;
+    margin-left: 250px;
+    
+    
+    
+}
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/* CONTACT CSS STYLING SECTION ENDING */
+
+
+
+/* FOOTER CSS STYLING SECTION STARTING PORTION */
+
+.foot {
+    position: relative;
+    top: 400px;
+    
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+.f-con {
+    padding: 10px;
+    
+}
+.footer-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.call-btn {
+    background-color: #28a745;
+}
+.email-btn {
+    background-color: red;
+}
+.footer-btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+.call-btn:hover {
+    background-color: #218838;
+
+}
+.email-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Section is Ended Here*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
